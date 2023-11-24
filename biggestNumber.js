@@ -4,16 +4,16 @@
 const array = [32,42,54,23,43];
 
 const biggestNo = (array) => {
-    let biggest=0
+    let biggest=0;
     for(let i=0; i<array.length; i++){
        
         if(biggest < array[i]){
-            biggest = array[i]
+            biggest = array[i];
         }else{
-            biggest = biggest
+            biggest = biggest;
         }
     }
 
     return biggest;
 }
-console.log(biggestNo(array))
+console.log(biggestNo(array));
