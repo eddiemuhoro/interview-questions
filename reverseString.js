@@ -1,3 +1,4 @@
+//reverse a atring
 const string = 'hello';
 
 const reverseString = (string) =>{

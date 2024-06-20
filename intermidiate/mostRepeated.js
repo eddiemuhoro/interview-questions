@@ -4,19 +4,16 @@
 function findElementWithFrequency(arr, targetFrequency) {
     const frequencyMap = {};
   
-    // Count the frequency of each element in the array
     arr.forEach(element => {
       frequencyMap[element] = (frequencyMap[element] || 0) + 1;
     });
   
-    // Find the element with the target frequency
     for (const [element, frequency] of Object.entries(frequencyMap)) {
       if (frequency === targetFrequency) {
-        return parseInt(element); // Convert the element back to a number if needed
+        return parseInt(element); 
       }
     }
   
-    // If no element with the target frequency is found
     return null;
   }
   
