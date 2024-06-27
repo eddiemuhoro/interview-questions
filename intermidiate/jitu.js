@@ -31,14 +31,14 @@ console.log(factorial(4));
 function geMostFrequent(string) {
   let maxCount = 0;
   let char = "";
-  let stringArray = string.split("");
-  stringArray.forEach((character) => {
-    let count = stringArray.filter((c) => c === character).length;
+  for (character of string) {
+    const count = string.split(character).length;
     if (count > maxCount) {
       maxCount = count;
       char = character;
     }
-  });
+  }
+
 
   return char;
 }
