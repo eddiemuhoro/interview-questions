@@ -2,31 +2,34 @@
 // Write a function that takes a string as input and returns true if the string is a palindrome 
 //(reads the same backward as forward), and false otherwise.
 
-const string = 'hannanhhhh'
 
-// const checkPalindrome = (string) => {
-//     let lastToStart = '';
+String.prototype.checkPalindrome = function() {
+    let lastToStart = '';
 
-//     for(let i = string.length-1; i >=0; i--){
-//         lastToStart += string[i];
-//     }
+    for(let i = this.length-1; i >=0; i--){
+        lastToStart += this[i];
+    }
 
-//     if (string == lastToStart){
-//         return true;
-//     }else {
-//         return false;
-//     }
+    if (this == lastToStart){
+        return true;
+    }else {
+        return false;
+    }
 
-// }
+}
 
 
-const checkPalindrome = (string) => {
-    const array = string.split('').reverse().join('')
-    if (array == string){
+String.prototype.isPalindrome = function() {
+    const array = this.split('').reverse().join('')
+    console.log(array)
+    if (array == this){
         return "Is palindrome"
     } else{
         return "Not palindrome"
     }
 } 
 
-console.log(checkPalindrome(string));
+console.log("hannah".isPalindrome())
+console.log("hannahggnnh".isPalindrome())
+
+console.log("hannajjh".checkPalindrome())
