@@ -2,21 +2,22 @@
 // Output: [0,1]
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-let nums = [2, 3, 7, 15];
+let nums = [3, 2, 4];
 let output = [];
-const target = 9;
+const target = 6;
 
 function getNums(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
-      const result = nums[i] + nums[j];
-      if (target === result) {
-        output.push(i, j);
-        return output;
+      if (i !== j) {
+        let result = nums[i] + nums[j];
+        console.log(result);
+        if (target === result) {
+          output.push(i, j);
+          return output;
+        }
       }
     }
-
-    return { error: "Error above" };
   }
 }
 
