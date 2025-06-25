@@ -5,12 +5,10 @@ const checkPalindrome = (paliName: string): boolean => {
   const regex = /[^a-z0-9]/g;
   refinedString = refinedString.replace(regex, "");
   console.log(refinedString);
-  const initiArray = refinedString
-    .replace(regex, "")
-    .split("")
-    .reverse()
-    .join("");
-  if (refinedString === initiArray) {
+  if (
+    refinedString.split("").reverse().join("") ==
+    paliName.toLocaleLowerCase().replace(regex, "")
+  ) {
     return true;
   }
   return false;
