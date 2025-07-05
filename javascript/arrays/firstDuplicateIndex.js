@@ -14,3 +14,5 @@ function firstDuplicateIndex(arr) {
 
 const arr = [2, 4, 5, 3, 4, 2, 7];
 console.log("Index of first duplicate:", firstDuplicateIndex(arr)); // Output: 4 (the second 4)
+
+//new Set() can also be used to track seen elements, but Map is useful if you want to store additional information like the index of the first occurrence.
