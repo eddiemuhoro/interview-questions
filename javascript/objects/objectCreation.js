@@ -10,7 +10,7 @@ person["full name with age"] = function () {
   return `${this["first name"]} ${this["last name"]} is ${this.age} years old`;
 };
 person.yob = 2000;
-person["first name"] = "Jan";
+person["first name"] = (person["first name"] || 0) + 1; // Convert first name to uppercase
 
 Object.assign(person, {
   "last name": "Doe",
