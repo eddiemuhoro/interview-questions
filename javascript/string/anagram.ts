@@ -1,5 +1,5 @@
-const s: string = "anagram";
-const t: string = "nagaram";
+const str1: string = "anagram";
+const str2: string = "nagaram";
 
 const checkAnagram = (s: string, t: string): boolean => {
   if (s.length !== t.length) return false;
@@ -12,4 +12,4 @@ const checkAnagram = (s: string, t: string): boolean => {
   return false;
 };
 
-console.log(checkAnagram(s, t));
+console.log(checkAnagram(str1, str2));

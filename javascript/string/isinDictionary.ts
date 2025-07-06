@@ -1,7 +1,7 @@
 //setup() -> takes an array of strings
 //isInDictionary() -> checks if a string is in the dictionary
 const word: string = "*at";
-const arr: string[] = ["cat", "bat"];
+const array: string[] = ["cat", "bat"];
 const regex = /\*/g;
 
 const setup = (arr: string[]): boolean => {
@@ -26,7 +26,7 @@ const setup = (arr: string[]): boolean => {
   return isInDictionary(word);
 };
 
-console.log(setup(arr));
+console.log(setup(array));
 
 //   const isInDictionary = (word: string): boolean => {
 //     return dic.has(word);
