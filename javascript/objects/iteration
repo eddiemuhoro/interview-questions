@@ -1,0 +1,25 @@
+// Given this object, write different ways to iterate through it
+const scores = {
+  math: 85,
+  science: 92,
+  english: 78,
+  history: 88,
+};
+function updateScores() {
+  let score = 0;
+  let highest = 0;
+  const keyArr = Object.keys(scores); //keys, values, entries
+  for (let i = 0; i < keyArr.length; i++) {
+    const key = keyArr[i];
+    score = scores[key] + score;
+
+    if (scores[key] > highest) {
+      highest = scores[key];
+    } else {
+      highest = highest;
+    }
+  }
+  return { res: { score, highest } };
+}
+
+console.log(updateScores());
